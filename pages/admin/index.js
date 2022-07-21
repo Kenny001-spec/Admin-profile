@@ -18,9 +18,9 @@ const Admin = (props) => {
     return (<div className='content'>
         <h1 className={styles.title}>Admin Page...👮‍♀️</h1>
         {props.data.map(adminUser => (
-            <div className={styles.btnUser}>
+            <div key={adminUser.username}>
                 <Link href={`/admin/${adminUser.id}`}>
-                    <a><h3 key={adminUser.id}>{adminUser.name}</h3></a>
+                    <a><h3>{adminUser.name}</h3></a>
                 </Link>
             </div>
 
